@@ -62,19 +62,19 @@ app.get('/', (req, res) => {
                 <label for="especie">Espécie do Animal:</label>
                 <select id="especie" name="especie" required>
                     <option value="">Selecione uma espécie...</option>
-                    <option value="Dragão Cuspidor de Fogo (Porte Mini)">Dragão Cuspidor de Fogo (Porte Mini)</option>
-                    <option value="Capivara Mística de Três Olhos">Capivara Mística de Três Olhos</option>
-                    <option value="Gato Voador Que Late">Gato Voador Que Late</option>
-                    <option value="Calopsita Treinada pelo FBI">Calopsita Treinada pelo FBI</option>
-                    <option value="Pinguim de Geladeira Real">Pinguim de Geladeira Real</option>
-                    <option value="Unicórnio Rebaixado (Com Suspensão a Ar)">Unicórnio Rebaixado (Com Suspensão a Ar)</option>
-                    <option value="Hamster Cibernético (Roda a 60 FPS)">Hamster Cibernético (Roda a 60 FPS)</option>
+                    <option value="Dragão">Dragão</option>
+                    <option value="Capivara">Capivara</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Calopsita">Calopsita</option>
+                    <option value="Pinguim">Pinguim</option>
+                    <option value="Unicórnio Rebaixado">Unicórnio Rebaixado</option>
+                    <option value="Cachorro Caramelo">Cachorro Caramelo</option>
                 </select>
 
                 <label for="fofura">Nível de Fofura / Periculosidade:</label>
                 <select id="fofura" name="fofura" required>
                     <option value="">Avalie a criatura...</option>
-                    <option value="Inofensivo e Gordinho">Inofensivo</option>
+                    <option value="Inofensivo">Inofensivo</option>
                     <option value="Fofo, mas rouba sua comida">Fofo, mas rouba sua comida</option>
                     <option value="Vai destruir o sofá, mas eu amo">Vai destruir o sofá, mas eu amo</option>
                     <option value="Perigo Biológico Nível 4 (Muito fofo)">Perigo Biológico Nível 4 (Muito fofo)</option>
@@ -112,12 +112,19 @@ app.post('/certidao', (req, res) => {
                 <title>Certidão Oficial</title>
                 <style>
                     body { font-family: 'Courier New', Courier, monospace; background-color: #f4f4f9; display: flex; flex-direction: column; align-items: center; padding: 40px; }
+
                     .documento { background-color: white; padding: 40px; border: 2px solid #333; box-shadow: 5px 5px 0px #d81b60; max-width: 600px; width: 100%; }
+
                     h2 { text-align: center; border-bottom: 2px dashed #333; padding-bottom: 10px; margin-bottom: 30px; }
+
                     table { width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 16px; }
+
                     th, td { border: 1px solid #333; padding: 12px; text-align: left; }
+
                     th { background-color: #fce4ec; width: 35%; }
+
                     .btn-voltar { display: block; text-align: center; background-color: #333; color: white; padding: 15px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+
                     .btn-voltar:hover { background-color: #d81b60; }
                 </style>
             </head>
@@ -140,7 +147,7 @@ app.post('/certidao', (req, res) => {
                                 <td>${fofura}</td>
                             </tr>
                             <tr>
-                                <th>Habilidade Especial</th>
+                                <th>Habilidade</th>
                                 <td>${habilidade}</td>
                             </tr>
                         </tbody>
@@ -150,7 +157,7 @@ app.post('/certidao', (req, res) => {
                         "Declaro, para os devidos fins, que serei responsável por alimentar e não deixar essa criatura destruir o mundo."
                     </p>
 
-                    <a href="/" class="btn-voltar">⬅ Adotar Outro Peto</a>
+                    <a href="/" class="btn-voltar">⬅ Adotar Outro Pet</a>
                 </div>
             </body>
             </html>
