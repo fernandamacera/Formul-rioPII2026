@@ -171,3 +171,6 @@ app.listen(port, host, () => {
     console.log(`Servidor rodando em http://${host}:${port}`);
 });
 
+
+
+
