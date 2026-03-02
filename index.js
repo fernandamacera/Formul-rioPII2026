@@ -170,3 +170,4 @@ app.post('/certidao', (req, res) => {
 app.listen(port, host, () => {
     console.log(`Servidor rodando em http://${host}:${port}`);
 });
+
